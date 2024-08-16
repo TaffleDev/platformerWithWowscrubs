@@ -39,6 +39,7 @@ public class AdvancedPlayerController : MonoBehaviour
     }
     public void Move(InputAction.CallbackContext ctx)
     {
+        Debug.Log("Move Called");
         horizontalMovement = ctx.ReadValue<Vector2>().x;
     }
 
@@ -48,7 +49,7 @@ public class AdvancedPlayerController : MonoBehaviour
         {
             Debug.Log("Jump is Pressed");
             rb2d.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-
+            AudioManager.Instance.PlayJumpSound();
 
         }
 
@@ -57,6 +58,7 @@ public class AdvancedPlayerController : MonoBehaviour
 
     void FlipSprite()
     {
+
         bool playerHasHorizontalSpeed = Mathf.Abs(rb2d.linearVelocity.x) > Mathf.Epsilon;
         if (playerHasHorizontalSpeed)
         {
