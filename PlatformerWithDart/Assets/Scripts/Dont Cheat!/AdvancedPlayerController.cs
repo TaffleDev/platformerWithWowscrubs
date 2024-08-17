@@ -5,10 +5,12 @@ public class AdvancedPlayerController : MonoBehaviour
 {
     
 
-    [SerializeField]
+    [SerializeField] 
     private float moveSpeed = 15;
     [SerializeField]
     private float jumpSpeed = 5;
+
+    
 
     private float horizontalMovement;
     
@@ -55,6 +57,8 @@ public class AdvancedPlayerController : MonoBehaviour
 
 
     }
+
+
 
     void FlipSprite()
     {
