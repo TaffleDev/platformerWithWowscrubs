@@ -4,7 +4,8 @@ public class BackgroundParallax : MonoBehaviour
 {
 
     private float length, startpos;
-    public GameObject cam;
+    [SerializeField]
+    private GameObject cam;
     public float parallaxEffect;
 
     void Start()
